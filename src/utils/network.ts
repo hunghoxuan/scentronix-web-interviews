@@ -25,7 +25,7 @@ export const checkOnlineUrls = async (urls: IPriorityURL[], priority?: number, t
    return sortUrlsByPriority(results.filter((result): result is IPriorityURL => result !== null));
 }
 
-// Function to sort URLs by priority. Use same sort function in result and 
+// function to sort URLs by priority. Use same sort function in result and 
 export const sortUrlsByPriority = (urls: IPriorityURL[]): IPriorityURL[] => {
    return urls.sort((a, b) => a.priority - b.priority);
 }
