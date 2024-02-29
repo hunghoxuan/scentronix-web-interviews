@@ -30,7 +30,7 @@ This project provides a simple TypeScript application that checks if a list of U
   
   Then edit variables in .env file:
    ```bash
-   PORT=3000
+   PORT = 3000
    REQUEST_TIMEOUT = 5000
    ```  
 3. **Run server local:**
@@ -44,11 +44,13 @@ This project provides a simple TypeScript application that checks if a list of U
 ### APIs
 
 1. **check-online-urls:**
-   Method: POST
-   Body params:
-   - priority: check only urls with given priority (null: select all).
-   - urls: array of urls needed to check { url, priority }  
-   ```bash
+
+   Method: POST 
+   Body params: 
+   - priority: check only urls with given priority (null: select all). 
+   - urls: array of urls needed to check { url, priority }.
+     
+    ```bash
     curl  -X POST \
     'http://localhost:3000/check-online-urls' \
     --header 'Content-Type: application/json' \
@@ -81,25 +83,25 @@ This project provides a simple TypeScript application that checks if a list of U
      }
     ]
     }'
-   ```
+    ```
 
-Response: return array of online urls.
-  ```bash
-  {
-    "success": true,
-    "online_urls": [
-      {
-        "url": "http://app.scnt.me",
-        "priority": 3
-      },
-      {
-        "url": "https://gitlab.com",
-        "priority": 4
-      },
-      {
-        "url": "https://github.com",
-        "priority": 4
-      }
-    ]
-  }
-  ```
+   Response: return array of online urls.
+     ```bash
+     {
+       "success": true,
+       "online_urls": [
+         {
+           "url": "http://app.scnt.me",
+           "priority": 3
+         },
+         {
+           "url": "https://gitlab.com",
+           "priority": 4
+         },
+         {
+           "url": "https://github.com",
+           "priority": 4
+         }
+       ]
+     }
+     ```
